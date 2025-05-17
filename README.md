@@ -93,10 +93,14 @@ MYSQLPASSWORD=your_db_password
 DEEPSEEK_API_KEY=your_deepseek_api_key_here
 
 ### Bước 3: Xây dựng Image Docker cho Nmap
+
+
 Từ thư mục gốc của dự án, chạy lệnh:
 docker build -t nmap .
 
 ### Bước 4: Thiết lập Môi trường ảo Python và Cài đặt Dependencies
+
+
 1. Tạo môi trường ảo:
 python -m venv venv
 2. Kích hoạt môi trường ảo:
@@ -108,12 +112,16 @@ python -m venv venv
 pip install Flask fastmcp python-dotenv mysql-connector-python requests markdown shortuuid asyncio
 
 ### Bước 5: Chạy Backend (FastMCP Nmap Server)
+
+
 Mở một cửa sổ terminal/PowerShell mới, điều hướng đến thư mục dự án, kích hoạt môi trường ảo (nếu chưa) và chạy:
 python nmap_mcp_server.py
 Server backend sẽ khởi chạy, thường là trên http://127.0.0.1:4200/nmap. Giữ cửa sổ này chạy.
 
 
 ### Bước 6: Chạy Frontend (Flask Web Application)
+
+
 Mở một cửa sổ terminal/PowerShell khác, điều hướng đến thư mục dự án, kích hoạt môi trường ảo (nếu chưa) và chạy:
 python app.py
 Server frontend Flask sẽ khởi chạy, thường là trên http://127.0.0.1:5000. Giữ cửa sổ này chạy.
